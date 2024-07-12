@@ -1,8 +1,6 @@
-# React + Vite
+<img src="./public/uzum.jpg"/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1>
+    <a href="https://www.youtube.com/watch?v=5-GTsgiq9Po&list=PLxyjvfxj0CUJjKGUvbpddX-vSWQyjtRgE">Youtube</a>
+    <a href="https://uzum-react-for-youtube.vercel.app/">Live Demo</a>
+</h1>
