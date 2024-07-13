@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HeaderTop, HeaderMid, Navbar } from "./style";
 import { Link } from 'react-router-dom';
+import NavbarModal from '../NavbarModal';
 
 
-let navbarItems = [
+export let navbarItems = [
     {
+
         id: 1,
         title: "Yozgi savdo",
         link: "category/1",
@@ -67,7 +69,9 @@ let navbarItems = [
 ]
 
 const Header = () => {
-    let location = ["Asaka"]
+    let location = ["Asaka"];
+    const [openModal, setOpenModal] = useState(false);
+
     return (
         <header>
 
@@ -111,12 +115,12 @@ const Header = () => {
             {/* HEADER TOP END */}
 
 
-            <div className="container">
 
                 {/* HEADER MID START */}
                 <HeaderMid>
-                    {/* HEADER MID LEFT  START*/}
-                    <div className='header__mid--left'>
+                  <div className="container header__mid-wrapper">
+                      {/* HEADER MID LEFT  START*/}
+                      <div className='header__mid--left'>
                         {/* LOGO  START */}
                         <Link className='header__mid--left-logo' to={"/"}>
                             <svg data-v-78b875fc="" height="32" viewBox="0 0 215 32" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Uzum" class="ui-icon  logo">
@@ -150,8 +154,8 @@ const Header = () => {
                     <div className="header__mid--center">
 
                         {/* CATALOG BTN START */}
-                        <button>
-                            <i className="fa-solid fa-bars"></i>
+                        <button onClick={() => setOpenModal(!openModal) }>
+                          {openModal ?   <i className="fa-solid fa-close"></i> :   <i className="fa-solid fa-bars"></i>}
                             <span>Katalog</span>
                         </button>
                         {/* CATALOG BTN START */}
@@ -200,18 +204,20 @@ const Header = () => {
                     </div>
                     {/* HEADER RIGHT END */}
                     {/*  RIGHT ICONS */}
+                  </div>
                 </HeaderMid>
                 {/* HEADER MID END */}
 
                 <Navbar>
-                    <ol className='navbar__list'>
+                   <div className="container">
+                   <ol className='navbar__list'>
                         {
                             navbarItems.map((item) => {
                                return (
                                     <li key={item.id}>
                                         <Link to={item.link}>
-                                        <img src={item.image} alt={item.title}  width={"24px"} height={"24px"}/>
-                                        <h5>{item.title}</h5>
+                                            <img src={item.image} alt={item.title}  width={"24px"} height={"24px"}/>
+                                            <h5>{item.title}</h5>
                                         </Link>
                                     </li>
                                )
@@ -225,8 +231,10 @@ const Header = () => {
                             </button>
                         </li>
                     </ol>
+                   </div>
+
+                    {openModal ? <NavbarModal/> : ""}
                 </Navbar>
-            </div>
         </header>
     )
 }
