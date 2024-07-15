@@ -72,6 +72,10 @@ const Header = () => {
     let location = ["Asaka"];
     const [openModal, setOpenModal] = useState(false);
 
+    function handleClick() {
+        setOpenModal(!openModal)
+    }
+
     return (
         <header>
 
@@ -154,7 +158,7 @@ const Header = () => {
                     <div className="header__mid--center">
 
                         {/* CATALOG BTN START */}
-                        <button onClick={() => setOpenModal(!openModal) }>
+                        <button onClick={handleClick }>
                           {openModal ?   <i className="fa-solid fa-close"></i> :   <i className="fa-solid fa-bars"></i>}
                             <span>Katalog</span>
                         </button>
@@ -223,9 +227,9 @@ const Header = () => {
                                )
                             })
                         }
-                    
+
                         <li>
-                            <button  className='navbar__list--item-btn'>
+                            <button onClick={handleClick}  className='navbar__list--item-btn'>
                                  <span>Yana</span>
                                  <i class="fa-solid fa-chevron-down"></i>
                             </button>

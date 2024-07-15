@@ -16,3 +16,12 @@ a {
     text-decoration: none;
 }
 
+
+.splide {
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.splide__track  {
+    border-radius: 10px;
+}
