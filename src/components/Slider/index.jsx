@@ -11,6 +11,7 @@ import '@splidejs/react-splide/css/sea-green';
 import '@splidejs/react-splide/css/core';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Link } from 'react-router-dom';
+import { SplideWrapper } from './style';
 
 
 const  SliderElements = [
@@ -94,7 +95,7 @@ const  SliderElements = [
 
 const Slider = () => {
   return (
-    <div>
+    <SplideWrapper>
         <Splide  options={{
            type   : 'loop',
         }} 
@@ -110,7 +111,7 @@ const Slider = () => {
             })}
                     
             </Splide>
-    </div>
+    </SplideWrapper>
   )
 }
 
