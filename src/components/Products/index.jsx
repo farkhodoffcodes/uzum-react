@@ -3,7 +3,7 @@ import {popularProducts} from "../../../public/db.json"
 import Product from '../Product';
 import { ProductsWrapper } from './style';
 
-const Products = () => {
+const Products = ({addToCart}) => {
     const [product,setProduct] = useState(popularProducts);
 
 
@@ -15,7 +15,7 @@ const Products = () => {
         {
             product.map((item) => {
                 return (
-                    <Product key={item.id} item={item}/>
+                    <Product key={item.id} item={item} addToCart={addToCart} />
                 )
             })
         }

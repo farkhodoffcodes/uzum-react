@@ -74,11 +74,26 @@ export const HeaderTop = styled.div`
 export const HeaderMid = styled.div`
     padding: 17px 0px;
 
+
+
     .header__mid-wrapper {
         display:flex;
     align-items:center;
     }
 
+
+    .header__mid--right--item-wrapper {
+        display: flex;
+        align-items:center;
+        gap:5px;
+
+        .cart--quantity {
+            display: inline-block;
+            padding: 2px 7px;
+            background-color: #7000FF;
+            color: white;
+        }
+    }
 
     .header__mid--left {
         margin-right: 50px; 

@@ -68,7 +68,7 @@ export let navbarItems = [
     },
 ]
 
-const Header = () => {
+const Header = ({length}) => {
     let location = ["Asaka"];
     const [openModal, setOpenModal] = useState(false);
 
@@ -201,7 +201,10 @@ const Header = () => {
                             <li className='header__mid--right-item'>
                                 <Link to={"/cart"}>
                                     <i class="fa-solid fa-bag-shopping"></i>
-                                    <span>Savat</span>
+                                    <div className='header__mid--right--item-wrapper'>
+                                            <span className='cart--title'>Savat</span>
+                                            <span className='cart--quantity'>{length}</span>
+                                    </div>
                                 </Link>
                             </li>
                         </ul>

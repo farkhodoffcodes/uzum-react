@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Header from './components/Header'
@@ -11,13 +11,23 @@ import Orders from './pages/Orders'
 import NotFound from './pages/NotFound'
 
 const App = () => {
-  return (
+  const [cart, setCart] = useState([]);
+
+
+  const addToCart = (item) => {
+    return (
+      setCart([...cart, item])
+    )
+  }
+
+
+   return (
     <>
-        <Header/>
+        <Header length={cart.length}/>
               <div className='container'>
                     <Routes>
-                        <Route path='/' element={<Home/>}/>
-                        <Route path='/cart' element={<Cart/>}/>
+                        <Route path='/' element={<Home addToCart={addToCart} />}/>
+                        <Route path='/cart' element={<Cart cart={cart}/>}/>
                         <Route path='/favourite' element={<Favourite/>}/>
                         <Route path='/faq' element={<Faq/>}/>
                         <Route path='/delivery-points' element={<DeliveryPoints/>}/>
