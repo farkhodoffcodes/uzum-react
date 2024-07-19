@@ -9,6 +9,7 @@ import Faq from './pages/Faq'
 import DeliveryPoints from './pages/DeliveyPoints'
 import Orders from './pages/Orders'
 import NotFound from './pages/NotFound'
+import Careers from './pages/Careers'
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -32,6 +33,7 @@ const App = () => {
                         <Route path='/faq' element={<Faq/>}/>
                         <Route path='/delivery-points' element={<DeliveryPoints/>}/>
                         <Route path='/orders' element={<Orders/>}/>
+                        <Route path='/careers' element={<Careers/>}/>
                         <Route path='/*' element={<NotFound/>}/>
                   </Routes>
         <Footer/>

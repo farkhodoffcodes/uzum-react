@@ -141,16 +141,10 @@ export const HeaderMid = styled.div`
                     i {
                             position: absolute;
                             top: 0px;    
-                            right: -50px;
+                            right: 0px;
                             background:#EDEFF2;
                         padding: 14px 28px;
                         color:#4D4F59;
-             
-                            border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-           
-
                         }
               }      
     }
@@ -179,7 +173,7 @@ padding: 0px 0px 20px 0px;
     .navbar__list {
         display:flex;
         align-items:center;
-        gap:19px;
+        gap:15px;
         list-style: none;
     
     

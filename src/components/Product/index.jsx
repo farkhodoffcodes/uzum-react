@@ -15,7 +15,6 @@ const Product = ({item, addToCart}) => {
 
   return (
     <ProductWrapper>
-
       <div className='product__top'>
           <img className='product__top--image' src={image} alt={title}/>
            <span className='product__top--image-sub'>{imgSubtitle}</span>

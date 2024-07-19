@@ -6,6 +6,7 @@ export const ProductWrapper = styled.div`
     border-radius: 10px;
 
 
+
     &:hover {
         transition: all .3s ease-in-out;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
