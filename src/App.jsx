@@ -28,7 +28,7 @@ const App = () => {
               <div className='container'>
                     <Routes>
                         <Route path='/' element={<Home addToCart={addToCart} />}/>
-                        <Route path='/cart' element={<Cart cart={cart}/>}/>
+                        <Route path='/cart' element={<Cart addToCart={addToCart} cart={cart} length={cart.length}/>}/>
                         <Route path='/favourite' element={<Favourite/>}/>
                         <Route path='/faq' element={<Faq/>}/>
                         <Route path='/delivery-points' element={<DeliveryPoints/>}/>
